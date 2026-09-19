@@ -28,8 +28,10 @@ window.JR_PRODUCTOS = [
     "precio": 149.9,
     "precioAntes": null,
     "destacado": true,
+    "stock": 3,
+    "agotado": false,
     "imagenes": [
-      "productos/01-Formal/Blazer%20Ejecutivo%20Negro%20DESTACADO%20-%20149.90.svg"
+      "productos/01-Formal/Blazer%20Ejecutivo%20Negro%20DESTACADO%20-%20149.90%20-%20stock%203.svg"
     ]
   },
   {
@@ -39,8 +41,10 @@ window.JR_PRODUCTOS = [
     "precio": 69.9,
     "precioAntes": 89.9,
     "destacado": false,
+    "stock": 0,
+    "agotado": true,
     "imagenes": [
-      "productos/02-Casual/Polo%20Oversize%20Streetwear%20-%2069.90%20-%20antes%2089.90.svg"
+      "productos/02-Casual/Polo%20Oversize%20Streetwear%20AGOTADO%20-%2069.90%20-%20antes%2089.90.svg"
     ]
   },
   {
@@ -50,6 +54,8 @@ window.JR_PRODUCTOS = [
     "precio": 79.9,
     "precioAntes": null,
     "destacado": false,
+    "stock": null,
+    "agotado": false,
     "imagenes": [
       "productos/03-Pijama/Pijama%20Saten%202%20Piezas%20-%2079.90.svg"
     ]

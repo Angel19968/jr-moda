@@ -88,6 +88,31 @@ dentro de esa carpeta de categoría, por ejemplo
 `productos/01-Formal/descripcion.txt`, y escribe la frase que quieras.
 Si el archivo no existe, créalo con ese mismo nombre.
 
+### 📦 Quiero mostrar cuántas unidades quedan
+
+Agrega `- stock N` al final del nombre (puede ir antes o después de
+"antes PRECIO_ANTERIOR"):
+
+```
+Blazer Ejecutivo Negro - 149.90 - stock 3.jpg
+```
+
+Si quedan **4 unidades o menos**, en el sitio aparece en rojo "¡Últimas
+3 unidades!" para generar urgencia de compra. Si no escribes "stock",
+no se muestra ningún contador (el producto se puede pedir siempre) —
+es opcional.
+
+### 🚫 La prenda ya no tiene stock
+
+Agrega la palabra `AGOTADO` en el nombre (o pon `- stock 0`). El
+sitio la muestra en gris con una cinta de "Agotado", no deja
+agregarla al carrito, y en su lugar aparece un botón para que la
+clienta pida que le avisen por WhatsApp cuando vuelva:
+
+```
+Blazer Ejecutivo Negro AGOTADO - 149.90.jpg
+```
+
 ### 🗂️ Quiero agregar una categoría nueva (ej. "Accesorios")
 
 Crea una carpeta nueva dentro de `productos/`, con un número al
@@ -118,6 +143,7 @@ subirla con el nombre correcto).
 | `Blazer Negro - S/149.90.jpg` (con "S/") | `Blazer Negro - 149.90.jpg` |
 | `blazer_negro_149.90.jpg` (con guiones bajos) | `Blazer Negro - 149.90.jpg` |
 | Foto sin ningún precio en el nombre | Siempre debe llevar `- PRECIO` |
+| `Blazer Negro - 149.90 - 3 unidades.jpg` | `Blazer Negro - 149.90 - stock 3.jpg` |
 
 Si un archivo no sigue el formato, esa foto simplemente no aparece en
 el sitio (no rompe nada) y queda avisado en el reporte de GitHub

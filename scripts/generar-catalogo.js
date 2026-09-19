@@ -48,7 +48,9 @@ function leerCarpetasDeCategoria() {
     .sort();
 }
 
-// "Nombre del producto - 149.90 - antes 199.90.jpg" -> { nombre, precio, precioAntes, destacado }
+// "Nombre del producto - 149.90 - antes 199.90 - stock 3.jpg"
+// -> { nombre, precio, precioAntes, destacado, stock, agotado }
+// Los segmentos "antes ..." y "stock ..." pueden ir en cualquier orden.
 function parsearNombreArchivo(nombreArchivo, categoriaCarpeta) {
   const ext = path.extname(nombreArchivo).toLowerCase();
   if (EXTENSIONES_VALIDAS.indexOf(ext) === -1) {
@@ -76,6 +78,11 @@ function parsearNombreArchivo(nombreArchivo, categoriaCarpeta) {
     destacado = true;
     nombreCrudo = limpiarTexto(nombreCrudo.replace(/\bdestacado\b/i, ''));
   }
+  let agotado = false;
+  if (/\bagotado\b/i.test(nombreCrudo)) {
+    agotado = true;
+    nombreCrudo = limpiarTexto(nombreCrudo.replace(/\bagotado\b/i, ''));
+  }
 
   const precio = parseFloat(partes[1].replace(',', '.'));
   if (isNaN(precio)) {
@@ -84,17 +91,31 @@ function parsearNombreArchivo(nombreArchivo, categoriaCarpeta) {
   }
 
   let precioAntes = null;
-  if (partes[2] && /^antes\s+/i.test(partes[2])) {
-    const numero = parseFloat(partes[2].replace(/^antes\s+/i, '').replace(',', '.'));
-    if (!isNaN(numero)) precioAntes = numero;
+  let stock = null;
+
+  for (let i = 2; i < partes.length; i++) {
+    const seg = partes[i];
+    if (/^antes\s+/i.test(seg)) {
+      const numero = parseFloat(seg.replace(/^antes\s+/i, '').replace(',', '.'));
+      if (!isNaN(numero)) precioAntes = numero;
+    } else if (/^stock\s+/i.test(seg)) {
+      const numero = parseInt(seg.replace(/^stock\s+/i, '').replace(/[^0-9]/g, ''), 10);
+      if (!isNaN(numero)) stock = numero;
+    } else {
+      advertir(`No entendí la parte "${seg}" del archivo "${categoriaCarpeta}/${nombreArchivo}" (la ignoro). Usa "antes PRECIO" o "stock N".`);
+    }
   }
+
+  if (stock !== null && stock <= 0) agotado = true;
 
   return {
     grupo: aSlug(nombreCrudo),
     nombre: nombreCrudo,
     precio: precio,
     precioAntes: precioAntes,
-    destacado: destacado
+    destacado: destacado,
+    stock: agotado ? 0 : stock,
+    agotado: agotado
   };
 }
 
@@ -141,6 +162,8 @@ function generar() {
           precio: datos.precio,
           precioAntes: datos.precioAntes,
           destacado: datos.destacado,
+          stock: datos.stock,
+          agotado: datos.agotado,
           imagenes: []
         };
       }
@@ -148,6 +171,8 @@ function generar() {
         'productos/' + encodeURIComponent(nombreCarpeta) + '/' + encodeURIComponent(archivo)
       );
       if (datos.destacado) grupos[clave].destacado = true;
+      if (datos.agotado) { grupos[clave].agotado = true; grupos[clave].stock = 0; }
+      else if (datos.stock !== null) { grupos[clave].stock = datos.stock; }
     });
 
     Object.keys(grupos).forEach((clave) => productos.push(grupos[clave]));

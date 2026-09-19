@@ -51,6 +51,12 @@ operar alguien sin conocimientos de programación.
   archivo (Windows le agrega automáticamente "(2)", "(3)"...).
 - **Producto destacado** (sale en "Los más pedidos"): agregar la
   palabra `DESTACADO` en el nombre del archivo.
+- **Cuántas unidades quedan:** agregar `- stock N` al nombre. Con 4 o
+  menos, se muestra una alerta roja de urgencia ("¡Últimas 3
+  unidades!"). Es opcional.
+- **Sin stock:** agregar la palabra `AGOTADO` (o `- stock 0`). La
+  prenda se muestra en gris, no se puede agregar al carrito, y en su
+  lugar se ofrece un botón para pedir que avisen cuando vuelva.
 
 Todo esto está documentado con ejemplos en
 [`GUIA-SUBIR-PRODUCTOS.md`](GUIA-SUBIR-PRODUCTOS.md) y en el archivo
@@ -98,7 +104,23 @@ ver el progreso en la pestaña **Actions** del repositorio en GitHub.
 Nombre de la prenda - PRECIO.jpg
 Nombre de la prenda - PRECIO - antes PRECIO_ANTERIOR.jpg     (con descuento)
 Nombre de la prenda DESTACADO - PRECIO.jpg                    (para "Los más pedidos")
+Nombre de la prenda - PRECIO - stock N.jpg                    (contador de unidades)
+Nombre de la prenda AGOTADO - PRECIO.jpg                      (sin stock)
 ```
+
+## Funciones del sitio
+
+- **Carrito de compra:** cada tarjeta tiene un botón "Agregar". El
+  carrito se abre como panel lateral, permite cambiar cantidades y
+  arma un solo mensaje de WhatsApp con todos los productos y el total
+  (no hay pagos en línea: el pedido se cierra por WhatsApp). Se guarda
+  en el navegador de cada visitante (`localStorage`), así que si
+  cierran la página y vuelven, su carrito sigue ahí.
+- **Vista rápida:** al hacer clic en la foto de un producto se abre un
+  panel con la imagen más grande, sin salir de la página.
+- **Favoritos, stock y urgencia, menú y "volver arriba"** con
+  animaciones — ver detalle en `assets/css/styles.css` y
+  `assets/js/app.js`.
 
 Guía completa, con ejemplos y errores comunes:
 [`GUIA-SUBIR-PRODUCTOS.md`](GUIA-SUBIR-PRODUCTOS.md).

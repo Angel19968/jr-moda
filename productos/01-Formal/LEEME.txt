@@ -19,6 +19,20 @@ CÓMO AGREGAR UNA PRENDA AQUÍ
 
    Blazer Ejecutivo Negro DESTACADO - 149.90.jpg
 
+4b. ¿Quieres mostrar cuántas unidades quedan? Agrega "- stock N":
+
+   Blazer Ejecutivo Negro - 149.90 - stock 3.jpg
+
+   Con 4 unidades o menos se muestra en rojo "¡Últimas 3 unidades!".
+   Si no la escribes, no se muestra ningún contador (normal).
+
+4c. ¿Ya no queda stock? Escribe AGOTADO en el nombre (o "stock 0"):
+
+   Blazer Ejecutivo Negro AGOTADO - 149.90.jpg
+
+   Se muestra en gris, con cinta de "Agotado", y no se puede agregar
+   al carrito (en su lugar sale un botón para pedir que le avisen).
+
 5. ¿Varias fotos de la misma prenda? Usa el mismo nombre y precio, y
    copia/pega el archivo otra vez: Windows le pondrá automáticamente
    " (2)", " (3)", etc. al final. Eso está bien, no lo borres.
