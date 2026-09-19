@@ -1,0 +1,9 @@
+{
+  "name": "jr-moda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de JR Moda — catálogo generado automáticamente desde la carpeta /productos.",
+  "scripts": {
+    "catalogo": "node scripts/generar-catalogo.js"
+  }
+}

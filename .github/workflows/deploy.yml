@@ -1,0 +1,62 @@
+name: Publicar catálogo y sitio
+
+# Se ejecuta cada vez que subes cambios a la rama "main"
+# (por ejemplo, al agregar una foto nueva en /productos) o manualmente
+# desde la pestaña "Actions" de GitHub.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write   # para guardar el catálogo generado
+  pages: write       # para publicar el sitio
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  generar-y-publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Leer /productos y generar el catálogo
+        run: node scripts/generar-catalogo.js
+
+      - name: Guardar el catálogo generado en el repositorio
+        run: |
+          git config user.name "jr-moda-bot"
+          git config user.email "actions@github.com"
+          git add assets/js/data/productos.js
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: actualizar catálogo automáticamente [skip ci]"
+            git push
+          else
+            echo "El catálogo no cambió, no hay nada que guardar."
+          fi
+
+      - name: Preparar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Empaquetar el sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

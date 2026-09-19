@@ -1,0 +1,39 @@
+CÓMO AGREGAR UNA PRENDA AQUÍ
+=============================
+
+1. Copia la foto de la prenda dentro de ESTA carpeta.
+2. Cambia el nombre del archivo con este formato:
+
+   Nombre de la prenda - PRECIO.jpg
+
+   Ejemplos:
+   Blazer Ejecutivo Negro - 149.90.jpg
+   Vestido Saten Elegante - 169.90.jpg
+
+3. ¿Tiene descuento? Agrega "- antes PRECIO_ANTERIOR":
+
+   Vestido Saten Elegante - 169.90 - antes 199.90.jpg
+
+4. ¿Quieres que salga en "Los más pedidos" (arriba de todo)? Escribe la
+   palabra DESTACADO en el nombre:
+
+   Blazer Ejecutivo Negro DESTACADO - 149.90.jpg
+
+5. ¿Varias fotos de la misma prenda? Usa el mismo nombre y precio, y
+   copia/pega el archivo otra vez: Windows le pondrá automáticamente
+   " (2)", " (3)", etc. al final. Eso está bien, no lo borres.
+
+   Blazer Ejecutivo Negro - 149.90.jpg
+   Blazer Ejecutivo Negro - 149.90 (2).jpg
+
+No necesitas instalar nada ni tocar código. Solo copia la foto, ponle
+el nombre correcto, y luego sube los cambios con GitHub Desktop
+("Commit" y "Push"). El sitio se actualiza solo en 1-2 minutos.
+
+Formatos de imagen permitidos: .jpg .jpeg .png .webp
+
+¿Quieres cambiar el texto de presentación de esta categoría? Edita
+el archivo "descripcion.txt" que está en esta misma carpeta.
+
+Guía completa: revisa GUIA-SUBIR-PRODUCTOS.md en la carpeta principal
+del proyecto.
