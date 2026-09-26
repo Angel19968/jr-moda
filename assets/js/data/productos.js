@@ -43,13 +43,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::enterizo-asimetrico",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Enterizo asimétrico",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Enterizo%20asim%C3%A9trico/Vino.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Enterizo%20asim%C3%A9trico%20-%2029.90/Vino.webp"
     ],
     "colores": [
       {
@@ -57,7 +57,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Vino",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Enterizo%20asim%C3%A9trico/Vino.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Enterizo%20asim%C3%A9trico%20-%2029.90/Vino.webp"
         ]
       }
     ]
@@ -66,13 +66,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::vestido-asimetrico-con-hebillas",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Vestido asimétrico con hebillas",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas/Beige%20tostado.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas%20-%2029.90/Beige%20tostado.webp"
     ],
     "colores": [
       {
@@ -80,7 +80,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Beige tostado",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas/Beige%20tostado.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas%20-%2029.90/Beige%20tostado.webp"
         ]
       },
       {
@@ -88,7 +88,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Mostaza marrón",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas/Mostaza%20marr%C3%B3n.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas%20-%2029.90/Mostaza%20marr%C3%B3n.webp"
         ]
       },
       {
@@ -96,7 +96,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Terracota",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas/Terracota.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20asim%C3%A9trico%20con%20hebillas%20-%2029.90/Terracota.webp"
         ]
       }
     ]
@@ -105,13 +105,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::vestido-corto-con-bolsillos",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Vestido corto con bolsillos",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos/Azul.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos%20-%2029.90/Azul.webp"
     ],
     "colores": [
       {
@@ -119,7 +119,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos/Azul.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos%20-%2029.90/Azul.webp"
         ]
       },
       {
@@ -127,7 +127,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Mostaza",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos/Mostaza.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos%20-%2029.90/Mostaza.webp"
         ]
       },
       {
@@ -135,7 +135,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos/Verde.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20corto%20con%20bolsillos%20-%2029.90/Verde.webp"
         ]
       }
     ]
@@ -144,13 +144,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::vestido-halter-con-aro",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Vestido halter con aro",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro/Fucsia.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro%20-%2029.90/Fucsia.webp"
     ],
     "colores": [
       {
@@ -158,7 +158,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Fucsia",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro/Fucsia.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro%20-%2029.90/Fucsia.webp"
         ]
       },
       {
@@ -166,7 +166,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris oscuro",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro/Gris%20oscuro.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro%20-%2029.90/Gris%20oscuro.webp"
         ]
       },
       {
@@ -174,7 +174,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro/Gris.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro%20-%2029.90/Gris.webp"
         ]
       },
       {
@@ -182,7 +182,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro/Negro.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20halter%20con%20aro%20-%2029.90/Negro.webp"
         ]
       }
     ]
@@ -191,13 +191,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::vestido-largo-con-aro",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Vestido largo con aro",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro/Oliva.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro%20-%2029.90/Oliva.webp"
     ],
     "colores": [
       {
@@ -205,7 +205,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Oliva",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro/Oliva.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro%20-%2029.90/Oliva.webp"
         ]
       },
       {
@@ -213,7 +213,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde salvia",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro/Verde%20salvia.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro%20-%2029.90/Verde%20salvia.webp"
         ]
       },
       {
@@ -221,7 +221,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Vino",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro/Vino.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20con%20aro%20-%2029.90/Vino.webp"
         ]
       }
     ]
@@ -230,13 +230,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::vestido-largo-fruncido",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Vestido largo fruncido",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido/Azul%20acero.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido%20-%2029.90/Azul%20acero.webp"
     ],
     "colores": [
       {
@@ -244,7 +244,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul acero",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido/Azul%20acero.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido%20-%2029.90/Azul%20acero.webp"
         ]
       },
       {
@@ -252,7 +252,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Crema",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido/Crema.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido%20-%2029.90/Crema.webp"
         ]
       },
       {
@@ -260,7 +260,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido/Verde.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20fruncido%20-%2029.90/Verde.webp"
         ]
       }
     ]
@@ -269,13 +269,13 @@ window.JR_PRODUCTOS = [
     "id": "vestidos-y-enterizos::vestido-largo-liso",
     "categoria": "vestidos-y-enterizos",
     "nombre": "Vestido largo liso",
-    "precio": null,
+    "precio": 29.9,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso/Azul%20acero.webp"
+      "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso%20-%2029.90/Azul%20acero.webp"
     ],
     "colores": [
       {
@@ -283,7 +283,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul acero",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso/Azul%20acero.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso%20-%2029.90/Azul%20acero.webp"
         ]
       },
       {
@@ -291,7 +291,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Crema",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso/Crema.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso%20-%2029.90/Crema.webp"
         ]
       },
       {
@@ -299,7 +299,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso/Verde.webp"
+          "productos/01-Vestidos%20y%20Enterizos/Vestido%20largo%20liso%20-%2029.90/Verde.webp"
         ]
       }
     ]
@@ -308,13 +308,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-acanalada-cuello-barco",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa acanalada cuello barco",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco/Gris.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco%20-%2018.00/Gris.webp"
     ],
     "colores": [
       {
@@ -322,7 +322,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco/Gris.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -330,7 +330,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -338,7 +338,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Mostaza",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco/Mostaza.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco%20-%2018.00/Mostaza.webp"
         ]
       },
       {
@@ -346,7 +346,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco/Negro.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco%20-%2018.00/Negro.webp"
         ]
       },
       {
@@ -354,7 +354,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rosa",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco/Rosa.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20acanalada%20cuello%20barco%20-%2018.00/Rosa.webp"
         ]
       }
     ]
@@ -363,13 +363,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-cruzada-con-broche",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa cruzada con broche",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche/Azul%20marino.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche%20-%2018.00/Azul%20marino.webp"
     ],
     "colores": [
       {
@@ -377,7 +377,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul marino",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche/Azul%20marino.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche%20-%2018.00/Azul%20marino.webp"
         ]
       },
       {
@@ -385,7 +385,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche/Gris.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -393,7 +393,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Marrón",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche/Marr%C3%B3n.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche%20-%2018.00/Marr%C3%B3n.webp"
         ]
       },
       {
@@ -401,7 +401,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Oliva",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche/Oliva.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche%20-%2018.00/Oliva.webp"
         ]
       },
       {
@@ -409,7 +409,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rosa",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche/Rosa.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20broche%20-%2018.00/Rosa.webp"
         ]
       }
     ]
@@ -418,13 +418,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-cruzada-con-cuello",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa cruzada con cuello",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello/Azul.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello%20-%2018.00/Azul.webp"
     ],
     "colores": [
       {
@@ -432,7 +432,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello/Azul.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello%20-%2018.00/Azul.webp"
         ]
       },
       {
@@ -440,7 +440,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello/Gris.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -448,7 +448,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -456,7 +456,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Terracota",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello/Terracota.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello%20-%2018.00/Terracota.webp"
         ]
       },
       {
@@ -464,7 +464,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello/Verde.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cruzada%20con%20cuello%20-%2018.00/Verde.webp"
         ]
       }
     ]
@@ -473,13 +473,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-cuello-alto-con-aro",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa cuello alto con aro",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro/Azul%20pizarra.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro%20-%2018.00/Azul%20pizarra.webp"
     ],
     "colores": [
       {
@@ -487,7 +487,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul pizarra",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro/Azul%20pizarra.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro%20-%2018.00/Azul%20pizarra.webp"
         ]
       },
       {
@@ -495,7 +495,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Celeste",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro/Celeste.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro%20-%2018.00/Celeste.webp"
         ]
       },
       {
@@ -503,7 +503,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro/Negro.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro%20-%2018.00/Negro.webp"
         ]
       },
       {
@@ -511,7 +511,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rojo",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro/Rojo.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20alto%20con%20aro%20-%2018.00/Rojo.webp"
         ]
       }
     ]
@@ -520,13 +520,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-cuello-drapeado",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa cuello drapeado",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado/Azul%20acero.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado%20-%2018.00/Azul%20acero.webp"
     ],
     "colores": [
       {
@@ -534,7 +534,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul acero",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado/Azul%20acero.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado%20-%2018.00/Azul%20acero.webp"
         ]
       },
       {
@@ -542,7 +542,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Crema",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado/Crema.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado%20-%2018.00/Crema.webp"
         ]
       },
       {
@@ -550,7 +550,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -558,7 +558,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde menta",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado/Verde%20menta.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20cuello%20drapeado%20-%2018.00/Verde%20menta.webp"
         ]
       }
     ]
@@ -567,13 +567,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-de-conjunto-cuello-drapeado",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa de conjunto cuello drapeado",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Celeste.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Celeste.webp"
     ],
     "colores": [
       {
@@ -581,7 +581,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Celeste",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Celeste.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Celeste.webp"
         ]
       },
       {
@@ -589,7 +589,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Fucsia",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Fucsia.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Fucsia.webp"
         ]
       },
       {
@@ -597,7 +597,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Gris.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -605,7 +605,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -613,7 +613,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Marrón",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Marr%C3%B3n.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Marr%C3%B3n.webp"
         ]
       },
       {
@@ -621,7 +621,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Negro.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Negro.webp"
         ]
       },
       {
@@ -629,7 +629,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rojo",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Rojo.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Rojo.webp"
         ]
       },
       {
@@ -637,7 +637,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Verde.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Verde.webp"
         ]
       },
       {
@@ -645,7 +645,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Vino",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado/Vino.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20de%20conjunto%20cuello%20drapeado%20-%2018.00/Vino.webp"
         ]
       }
     ]
@@ -654,13 +654,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-fruncida-con-tiras",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa fruncida con tiras",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Azul.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Azul.webp"
     ],
     "colores": [
       {
@@ -668,7 +668,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Azul.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Azul.webp"
         ]
       },
       {
@@ -676,7 +676,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Celeste",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Celeste.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Celeste.webp"
         ]
       },
       {
@@ -684,7 +684,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Crema",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Crema.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Crema.webp"
         ]
       },
       {
@@ -692,7 +692,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Fucsia",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Fucsia.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Fucsia.webp"
         ]
       },
       {
@@ -700,7 +700,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Marrón",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Marr%C3%B3n.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Marr%C3%B3n.webp"
         ]
       },
       {
@@ -708,7 +708,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Mostaza",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Mostaza.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Mostaza.webp"
         ]
       },
       {
@@ -716,7 +716,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras/Verde.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20con%20tiras%20-%2018.00/Verde.webp"
         ]
       }
     ]
@@ -725,13 +725,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-fruncida-escote-corazon",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa fruncida escote corazón",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n/Azul%20marino.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n%20-%2018.00/Azul%20marino.webp"
     ],
     "colores": [
       {
@@ -739,7 +739,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul marino",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n/Azul%20marino.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n%20-%2018.00/Azul%20marino.webp"
         ]
       },
       {
@@ -747,7 +747,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Marrón",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n/Marr%C3%B3n.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n%20-%2018.00/Marr%C3%B3n.webp"
         ]
       },
       {
@@ -755,7 +755,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Oliva",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n/Oliva.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n%20-%2018.00/Oliva.webp"
         ]
       },
       {
@@ -763,7 +763,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rosa",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n/Rosa.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20fruncida%20escote%20coraz%C3%B3n%20-%2018.00/Rosa.webp"
         ]
       }
     ]
@@ -772,13 +772,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-hombros-descubiertos",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa hombros descubiertos",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos/Azul.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos%20-%2018.00/Azul.webp"
     ],
     "colores": [
       {
@@ -786,7 +786,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos/Azul.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos%20-%2018.00/Azul.webp"
         ]
       },
       {
@@ -794,7 +794,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -802,7 +802,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Marrón",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos/Marr%C3%B3n.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos%20-%2018.00/Marr%C3%B3n.webp"
         ]
       },
       {
@@ -810,7 +810,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos/Verde.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20hombros%20descubiertos%20-%2018.00/Verde.webp"
         ]
       }
     ]
@@ -819,13 +819,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::blusa-nudo-frontal",
     "categoria": "blusas-y-tops",
     "nombre": "Blusa nudo frontal",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal/Azul.webp"
+      "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal%20-%2018.00/Azul.webp"
     ],
     "colores": [
       {
@@ -833,7 +833,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal/Azul.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal%20-%2018.00/Azul.webp"
         ]
       },
       {
@@ -841,7 +841,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal/Gris.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -849,7 +849,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -857,7 +857,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Terracota",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal/Terracota.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal%20-%2018.00/Terracota.webp"
         ]
       },
       {
@@ -865,7 +865,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal/Verde.webp"
+          "productos/02-Blusas%20y%20Tops/Blusa%20nudo%20frontal%20-%2018.00/Verde.webp"
         ]
       }
     ]
@@ -874,13 +874,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::body-cruzado",
     "categoria": "blusas-y-tops",
     "nombre": "Body cruzado",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Body%20cruzado/Azul.webp"
+      "productos/02-Blusas%20y%20Tops/Body%20cruzado%20-%2018.00/Azul.webp"
     ],
     "colores": [
       {
@@ -888,7 +888,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Body%20cruzado/Azul.webp"
+          "productos/02-Blusas%20y%20Tops/Body%20cruzado%20-%2018.00/Azul.webp"
         ]
       },
       {
@@ -896,7 +896,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Body%20cruzado/Gris.webp"
+          "productos/02-Blusas%20y%20Tops/Body%20cruzado%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -904,7 +904,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Lila",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Body%20cruzado/Lila.webp"
+          "productos/02-Blusas%20y%20Tops/Body%20cruzado%20-%2018.00/Lila.webp"
         ]
       },
       {
@@ -912,7 +912,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Terracota",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Body%20cruzado/Terracota.webp"
+          "productos/02-Blusas%20y%20Tops/Body%20cruzado%20-%2018.00/Terracota.webp"
         ]
       },
       {
@@ -920,7 +920,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Body%20cruzado/Verde.webp"
+          "productos/02-Blusas%20y%20Tops/Body%20cruzado%20-%2018.00/Verde.webp"
         ]
       }
     ]
@@ -929,13 +929,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::top-de-un-hombro",
     "categoria": "blusas-y-tops",
     "nombre": "Top de un hombro",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro/Blanco.webp"
+      "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro%20-%2018.00/Blanco.webp"
     ],
     "colores": [
       {
@@ -943,7 +943,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Blanco",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro/Blanco.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro%20-%2018.00/Blanco.webp"
         ]
       },
       {
@@ -951,7 +951,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Ciruela",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro/Ciruela.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro%20-%2018.00/Ciruela.webp"
         ]
       },
       {
@@ -959,7 +959,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rojo",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro/Rojo.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro%20-%2018.00/Rojo.webp"
         ]
       },
       {
@@ -967,7 +967,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Taupe",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro/Taupe.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20de%20un%20hombro%20-%2018.00/Taupe.webp"
         ]
       }
     ]
@@ -976,13 +976,13 @@ window.JR_PRODUCTOS = [
     "id": "blusas-y-tops::top-tejido-sin-mangas",
     "categoria": "blusas-y-tops",
     "nombre": "Top tejido sin mangas",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas/Azul%20marino.webp"
+      "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas%20-%2018.00/Azul%20marino.webp"
     ],
     "colores": [
       {
@@ -990,7 +990,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul marino",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas/Azul%20marino.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas%20-%2018.00/Azul%20marino.webp"
         ]
       },
       {
@@ -998,7 +998,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Beige",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas/Beige.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas%20-%2018.00/Beige.webp"
         ]
       },
       {
@@ -1006,7 +1006,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Blanco",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas/Blanco.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas%20-%2018.00/Blanco.webp"
         ]
       },
       {
@@ -1014,7 +1014,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Terracota",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas/Terracota.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas%20-%2018.00/Terracota.webp"
         ]
       },
       {
@@ -1022,7 +1022,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Vino",
         "agotado": false,
         "imagenes": [
-          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas/Vino.webp"
+          "productos/02-Blusas%20y%20Tops/Top%20tejido%20sin%20mangas%20-%2018.00/Vino.webp"
         ]
       }
     ]
@@ -1031,13 +1031,13 @@ window.JR_PRODUCTOS = [
     "id": "pantalones-y-leggings::leggings",
     "categoria": "pantalones-y-leggings",
     "nombre": "Leggings",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/03-Pantalones%20y%20Leggings/Leggings/Azul%20estampado.webp"
+      "productos/03-Pantalones%20y%20Leggings/Leggings%20-%2018.00/Azul%20estampado.webp"
     ],
     "colores": [
       {
@@ -1045,7 +1045,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul estampado",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Leggings/Azul%20estampado.webp"
+          "productos/03-Pantalones%20y%20Leggings/Leggings%20-%2018.00/Azul%20estampado.webp"
         ]
       },
       {
@@ -1053,7 +1053,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Beige gris",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Leggings/Beige%20gris.webp"
+          "productos/03-Pantalones%20y%20Leggings/Leggings%20-%2018.00/Beige%20gris.webp"
         ]
       },
       {
@@ -1061,7 +1061,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Leggings/Gris.webp"
+          "productos/03-Pantalones%20y%20Leggings/Leggings%20-%2018.00/Gris.webp"
         ]
       },
       {
@@ -1069,7 +1069,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Malva",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Leggings/Malva.webp"
+          "productos/03-Pantalones%20y%20Leggings/Leggings%20-%2018.00/Malva.webp"
         ]
       },
       {
@@ -1077,7 +1077,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde estampado",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Leggings/Verde%20estampado.webp"
+          "productos/03-Pantalones%20y%20Leggings/Leggings%20-%2018.00/Verde%20estampado.webp"
         ]
       }
     ]
@@ -1086,13 +1086,13 @@ window.JR_PRODUCTOS = [
     "id": "pantalones-y-leggings::pantalon-de-cuadros",
     "categoria": "pantalones-y-leggings",
     "nombre": "Pantalón de cuadros",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros/Cuadros%20azul%20crema.webp"
+      "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros%20-%2018.00/Cuadros%20azul%20crema.webp"
     ],
     "colores": [
       {
@@ -1100,7 +1100,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Cuadros azul crema",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros/Cuadros%20azul%20crema.webp"
+          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros%20-%2018.00/Cuadros%20azul%20crema.webp"
         ]
       },
       {
@@ -1108,7 +1108,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Cuadros azul mostaza",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros/Cuadros%20azul%20mostaza.webp"
+          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros%20-%2018.00/Cuadros%20azul%20mostaza.webp"
         ]
       },
       {
@@ -1116,7 +1116,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Cuadros negro vino",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros/Cuadros%20negro%20vino.webp"
+          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros%20-%2018.00/Cuadros%20negro%20vino.webp"
         ]
       },
       {
@@ -1124,7 +1124,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Cuadros vino",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros/Cuadros%20vino.webp"
+          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20de%20cuadros%20-%2018.00/Cuadros%20vino.webp"
         ]
       }
     ]
@@ -1133,13 +1133,13 @@ window.JR_PRODUCTOS = [
     "id": "pantalones-y-leggings::pantalon-jogger",
     "categoria": "pantalones-y-leggings",
     "nombre": "Pantalón jogger",
-    "precio": null,
+    "precio": 18,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20jogger/Negro.webp"
+      "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20jogger%20-%2018.00/Negro.webp"
     ],
     "colores": [
       {
@@ -1147,7 +1147,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20jogger/Negro.webp"
+          "productos/03-Pantalones%20y%20Leggings/Pantal%C3%B3n%20jogger%20-%2018.00/Negro.webp"
         ]
       }
     ]
@@ -1156,13 +1156,13 @@ window.JR_PRODUCTOS = [
     "id": "casacas-y-chalecos::casaca-acanalada-con-cierre",
     "categoria": "casacas-y-chalecos",
     "nombre": "Casaca acanalada con cierre",
-    "precio": null,
+    "precio": 35,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre/Mostaza.webp"
+      "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre%20-%2035.00/Mostaza.webp"
     ],
     "colores": [
       {
@@ -1170,7 +1170,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Mostaza",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre/Mostaza.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre%20-%2035.00/Mostaza.webp"
         ]
       },
       {
@@ -1178,7 +1178,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre/Negro.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre%20-%2035.00/Negro.webp"
         ]
       },
       {
@@ -1186,7 +1186,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre/Verde.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20acanalada%20con%20cierre%20-%2035.00/Verde.webp"
         ]
       }
     ]
@@ -1195,13 +1195,13 @@ window.JR_PRODUCTOS = [
     "id": "casacas-y-chalecos::casaca-universitaria",
     "categoria": "casacas-y-chalecos",
     "nombre": "Casaca universitaria",
-    "precio": null,
+    "precio": 35,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria/Azul%20marino.webp"
+      "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria%20-%2035.00/Azul%20marino.webp"
     ],
     "colores": [
       {
@@ -1209,7 +1209,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul marino",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria/Azul%20marino.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria%20-%2035.00/Azul%20marino.webp"
         ]
       },
       {
@@ -1217,7 +1217,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris claro",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria/Gris%20claro.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria%20-%2035.00/Gris%20claro.webp"
         ]
       },
       {
@@ -1225,7 +1225,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris oscuro",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria/Gris%20oscuro.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria%20-%2035.00/Gris%20oscuro.webp"
         ]
       },
       {
@@ -1233,7 +1233,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria/Negro.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria%20-%2035.00/Negro.webp"
         ]
       },
       {
@@ -1241,7 +1241,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria/Verde.webp"
+          "productos/04-Casacas%20y%20Chalecos/Casaca%20universitaria%20-%2035.00/Verde.webp"
         ]
       }
     ]
@@ -1250,13 +1250,13 @@ window.JR_PRODUCTOS = [
     "id": "casacas-y-chalecos::chaleco-con-ribete",
     "categoria": "casacas-y-chalecos",
     "nombre": "Chaleco con ribete",
-    "precio": null,
+    "precio": 35,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete/Beige.webp"
+      "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete%20-%2035.00/Beige.webp"
     ],
     "colores": [
       {
@@ -1264,7 +1264,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Beige",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete/Beige.webp"
+          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete%20-%2035.00/Beige.webp"
         ]
       },
       {
@@ -1272,7 +1272,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Camel",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete/Camel.webp"
+          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete%20-%2035.00/Camel.webp"
         ]
       },
       {
@@ -1280,7 +1280,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Gris",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete/Gris.webp"
+          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete%20-%2035.00/Gris.webp"
         ]
       },
       {
@@ -1288,7 +1288,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Negro",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete/Negro.webp"
+          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete%20-%2035.00/Negro.webp"
         ]
       },
       {
@@ -1296,7 +1296,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde",
         "agotado": false,
         "imagenes": [
-          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete/Verde.webp"
+          "productos/04-Casacas%20y%20Chalecos/Chaleco%20con%20ribete%20-%2035.00/Verde.webp"
         ]
       }
     ]
@@ -1305,13 +1305,13 @@ window.JR_PRODUCTOS = [
     "id": "conjuntos::conjunto-acanalado",
     "categoria": "conjuntos",
     "nombre": "Conjunto acanalado",
-    "precio": null,
+    "precio": 35,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/05-Conjuntos/Conjunto%20acanalado/Azul%20acero.webp"
+      "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Azul%20acero.webp"
     ],
     "colores": [
       {
@@ -1319,7 +1319,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Azul acero",
         "agotado": false,
         "imagenes": [
-          "productos/05-Conjuntos/Conjunto%20acanalado/Azul%20acero.webp"
+          "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Azul%20acero.webp"
         ]
       },
       {
@@ -1327,7 +1327,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Crema",
         "agotado": false,
         "imagenes": [
-          "productos/05-Conjuntos/Conjunto%20acanalado/Crema.webp"
+          "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Crema.webp"
         ]
       },
       {
@@ -1335,7 +1335,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rosa claro",
         "agotado": false,
         "imagenes": [
-          "productos/05-Conjuntos/Conjunto%20acanalado/Rosa%20claro.webp"
+          "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Rosa%20claro.webp"
         ]
       },
       {
@@ -1343,7 +1343,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Rosa",
         "agotado": false,
         "imagenes": [
-          "productos/05-Conjuntos/Conjunto%20acanalado/Rosa.webp"
+          "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Rosa.webp"
         ]
       },
       {
@@ -1351,7 +1351,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde claro",
         "agotado": false,
         "imagenes": [
-          "productos/05-Conjuntos/Conjunto%20acanalado/Verde%20claro.webp"
+          "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Verde%20claro.webp"
         ]
       },
       {
@@ -1359,7 +1359,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Verde oscuro",
         "agotado": false,
         "imagenes": [
-          "productos/05-Conjuntos/Conjunto%20acanalado/Verde%20oscuro.webp"
+          "productos/05-Conjuntos/Conjunto%20acanalado%20-%2035.00/Verde%20oscuro.webp"
         ]
       }
     ]
@@ -1368,13 +1368,13 @@ window.JR_PRODUCTOS = [
     "id": "pijamas::pantalon-pijama-estampado",
     "categoria": "pijamas",
     "nombre": "Pantalón pijama estampado",
-    "precio": null,
+    "precio": 25,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado/Corazones%20negro.webp"
+      "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado%20-%2025.00/Corazones%20negro.webp"
     ],
     "colores": [
       {
@@ -1382,7 +1382,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Corazones negro",
         "agotado": false,
         "imagenes": [
-          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado/Corazones%20negro.webp"
+          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado%20-%2025.00/Corazones%20negro.webp"
         ]
       },
       {
@@ -1390,7 +1390,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Corazones rojo",
         "agotado": false,
         "imagenes": [
-          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado/Corazones%20rojo.webp"
+          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado%20-%2025.00/Corazones%20rojo.webp"
         ]
       },
       {
@@ -1398,7 +1398,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Corazones rosa",
         "agotado": false,
         "imagenes": [
-          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado/Corazones%20rosa.webp"
+          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado%20-%2025.00/Corazones%20rosa.webp"
         ]
       },
       {
@@ -1406,7 +1406,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Estampado negro",
         "agotado": false,
         "imagenes": [
-          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado/Estampado%20negro.webp"
+          "productos/06-Pijamas/Pantal%C3%B3n%20pijama%20estampado%20-%2025.00/Estampado%20negro.webp"
         ]
       }
     ]
@@ -1415,13 +1415,13 @@ window.JR_PRODUCTOS = [
     "id": "pijamas::pijama-de-personajes",
     "categoria": "pijamas",
     "nombre": "Pijama de personajes",
-    "precio": null,
+    "precio": 25,
     "precioAntes": null,
     "destacado": false,
     "stock": null,
     "agotado": false,
     "imagenes": [
-      "productos/06-Pijamas/Pijama%20de%20personajes/Naranja%20Kitty.webp"
+      "productos/06-Pijamas/Pijama%20de%20personajes%20-%2025.00/Naranja%20Kitty.webp"
     ],
     "colores": [
       {
@@ -1429,7 +1429,7 @@ window.JR_PRODUCTOS = [
         "nombre": "Naranja Kitty",
         "agotado": false,
         "imagenes": [
-          "productos/06-Pijamas/Pijama%20de%20personajes/Naranja%20Kitty.webp"
+          "productos/06-Pijamas/Pijama%20de%20personajes%20-%2025.00/Naranja%20Kitty.webp"
         ]
       }
     ]
