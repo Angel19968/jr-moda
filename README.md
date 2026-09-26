@@ -19,9 +19,12 @@ jr-moda/
 │   ├── js/data/productos.js      # ⚙️ GENERADO AUTOMÁTICAMENTE — no editar a mano
 │   └── img/logo.png              # logo de la marca
 ├── productos/                    # 👉 AQUÍ se agregan las fotos de cada prenda
-│   ├── 01-Formal/
-│   ├── 02-Casual/
-│   └── 03-Pijama/
+│   ├── 01-Vestidos y Enterizos/
+│   │   └── Vestido halter con aro/   # una carpeta por modelo = una foto por color
+│   │       ├── Negro.webp
+│   │       └── Fucsia.webp
+│   ├── 02-Blusas y Tops/
+│   └── ...
 ├── scripts/
 │   └── generar-catalogo.js       # lee /productos y escribe productos.js
 └── .github/workflows/deploy.yml  # arma el catálogo y publica el sitio automáticamente
@@ -41,6 +44,12 @@ operar alguien sin conocimientos de programación.
 ### Escalable por diseño
 
 - **Nuevas prendas:** una foto nueva en la carpeta correcta.
+- **Prendas en varios colores:** una subcarpeta por modelo
+  (`Vestido halter con aro - 89.90/`) con una foto por color
+  (`Negro.webp`, `Fucsia.webp`...). En el sitio sale una tarjeta con
+  muestras de color, como en las tiendas online; el color elegido va
+  al carrito y al mensaje de WhatsApp. El precio es opcional: sin
+  precio se muestra "Consultar precio".
 - **Nueva categoría:** una carpeta nueva dentro de `productos/` (ej.
   `04-Accesorios`). Aparece sola en el menú, en los filtros y como
   nueva sección — sin tocar código. El número al inicio del nombre
@@ -101,6 +110,8 @@ ver el progreso en la pestaña **Actions** del repositorio en GitHub.
 ## Convención de nombres de archivo (resumen)
 
 ```
+Modelo - PRECIO/Color.webp                                    (varios colores; PRECIO opcional)
+Modelo - PRECIO/Color AGOTADO.webp                            (un color sin stock)
 Nombre de la prenda - PRECIO.jpg
 Nombre de la prenda - PRECIO - antes PRECIO_ANTERIOR.jpg     (con descuento)
 Nombre de la prenda DESTACADO - PRECIO.jpg                    (para "Los más pedidos")

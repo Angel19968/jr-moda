@@ -1,0 +1,54 @@
+CÓMO AGREGAR UNA PRENDA AQUÍ
+=============================
+
+FORMA 1 — PRENDA CON VARIOS COLORES (recomendada)
+--------------------------------------------------
+1. Crea una carpeta con el nombre del modelo y, si quieres, su precio:
+
+   Vestido halter con aro - 89.90
+
+   (Si todavía no tiene precio, ponle solo el nombre: "Vestido halter con aro".
+   En el sitio saldrá "Consultar precio".)
+
+2. Dentro de esa carpeta, guarda una foto por color, con el nombre del color:
+
+   Negro.webp
+   Fucsia.webp
+   Gris oscuro.webp
+
+   En el sitio aparece un circulito por cada color para elegirlo.
+
+3. ¿Otra foto del mismo color? Copia/pega el archivo: Windows le pone
+   " (2)" al final ("Negro (2).webp"). Eso está bien, no lo borres.
+
+4. ¿Se acabó un color? Agrega AGOTADO al nombre de la foto:
+
+   Fucsia AGOTADO.webp
+
+5. En el nombre de la CARPETA también funcionan estos trucos:
+
+   Vestido halter con aro DESTACADO - 89.90        (sale en "Los más pedidos")
+   Vestido halter con aro - 79.90 - antes 99.90    (precio tachado y % de descuento)
+   Vestido halter con aro - 89.90 - stock 3        ("¡Últimas 3 unidades!")
+   Vestido halter con aro AGOTADO - 89.90          (todo el modelo agotado)
+
+
+FORMA 2 — PRENDA DE UN SOLO COLOR (foto suelta)
+------------------------------------------------
+Copia la foto directamente en ESTA carpeta con este nombre:
+
+   Nombre de la prenda - PRECIO.jpg      (ej: Blazer Negro - 149.90.jpg)
+
+Aquí el precio es obligatorio. Valen los mismos trucos: DESTACADO,
+AGOTADO, "- antes PRECIO" y "- stock N".
+
+
+No necesitas instalar nada ni tocar código. Luego sube los cambios con
+GitHub Desktop ("Commit" y "Push"). El sitio se actualiza solo en 1-2 minutos.
+
+Formatos de imagen permitidos: .jpg .jpeg .png .webp
+
+¿Quieres cambiar el texto de presentación de esta categoría? Edita
+el archivo "descripcion.txt" que está en esta misma carpeta.
+
+Guía completa: GUIA-SUBIR-PRODUCTOS.md en la carpeta principal del proyecto.

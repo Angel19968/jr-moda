@@ -2,3 +2,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# Paquete original de imágenes (fuente, no se publica)
+eterna-modelos-y-colores/
+eterna-modelos-y-colores.zip

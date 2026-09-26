@@ -11,13 +11,43 @@ correctamente y **2)** subirla a GitHub. Tarda un par de minutos.
 
 Dentro de la carpeta `productos/` hay una carpeta por categoría:
 
-- `productos/01-Formal`
-- `productos/02-Casual`
-- `productos/03-Pijama`
+- `productos/01-Vestidos y Enterizos`
+- `productos/02-Blusas y Tops`
+- `productos/03-Pantalones y Leggings`
+- `productos/04-Casacas y Chalecos`
+- `productos/05-Conjuntos`
+- `productos/06-Pijamas`
 
 Copia la foto de la prenda dentro de la carpeta que le corresponda.
 
-### Paso 2: cambia el nombre del archivo
+### Paso 2 (prenda con varios colores): una carpeta por modelo
+
+Si la prenda viene en varios colores, crea **una carpeta con el nombre
+del modelo** dentro de la categoría, y guarda adentro **una foto por
+color**, con el nombre del color:
+
+```
+productos/01-Vestidos y Enterizos/Vestido halter con aro - 89.90/
+    Negro.webp
+    Fucsia.webp
+    Gris oscuro.webp
+```
+
+En el sitio aparece una sola tarjeta con un circulito por color; la
+clienta elige el color y ese color es el que va al carrito y al mensaje
+de WhatsApp.
+
+- **El precio va en el nombre de la carpeta** (`- 89.90`). Si todavía
+  no lo tienes, pon solo el nombre del modelo: en el sitio sale
+  "Consultar precio" y el pedido llega por WhatsApp como "precio por
+  confirmar".
+- **Otra foto del mismo color:** `Negro (2).webp`.
+- **Un color agotado:** `Fucsia AGOTADO.webp` (el circulito sale
+  tachado y en su lugar se ofrece "Avisarme cuando vuelva").
+- En el nombre de la carpeta también funcionan `DESTACADO`, `AGOTADO`,
+  `- antes PRECIO` y `- stock N` (ver "Trucos útiles" más abajo).
+
+### Paso 2 (prenda de un solo color): cambia el nombre del archivo
 
 Este es el único paso importante. El nombre del archivo le dice al
 sitio web el **nombre de la prenda** y su **precio**. El formato es:
@@ -144,6 +174,7 @@ subirla con el nombre correcto).
 | `blazer_negro_149.90.jpg` (con guiones bajos) | `Blazer Negro - 149.90.jpg` |
 | Foto sin ningún precio en el nombre | Siempre debe llevar `- PRECIO` |
 | `Blazer Negro - 149.90 - 3 unidades.jpg` | `Blazer Negro - 149.90 - stock 3.jpg` |
+| Carpeta de modelo `Vestido - S/ 89.90` | `Vestido - 89.90` |
 
 Si un archivo no sigue el formato, esa foto simplemente no aparece en
 el sitio (no rompe nada) y queda avisado en el reporte de GitHub
