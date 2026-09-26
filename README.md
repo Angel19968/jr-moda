@@ -127,6 +127,13 @@ Nombre de la prenda AGOTADO - PRECIO.jpg                      (sin stock)
   (no hay pagos en línea: el pedido se cierra por WhatsApp). Se guarda
   en el navegador de cada visitante (`localStorage`), así que si
   cierran la página y vuelven, su carrito sigue ahí.
+- **Pago con Yape:** dentro del carrito, el botón "Pagar con Yape"
+  muestra el monto, el QR (`assets/img/yape-qr.webp`, con opción de
+  descargarlo para pagar desde el mismo celular) y los pasos. Al final,
+  "Ya pagué: enviar captura por WhatsApp" manda el pedido con el
+  detalle para adjuntar el comprobante. Si cambia la cuenta, reemplaza
+  esa imagen (mismo nombre) y el titular en `YAPE_TITULAR`, arriba de
+  `assets/js/app.js`.
 - **Vista rápida:** al hacer clic en la foto de un producto se abre un
   panel con la imagen más grande, sin salir de la página.
 - **Favoritos, stock y urgencia, menú y "volver arriba"** con

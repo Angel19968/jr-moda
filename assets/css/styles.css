@@ -380,3 +380,19 @@ body.no-scroll{overflow:hidden;}
   .p-add-row{flex-direction:column;gap:6px;}
   .p-add-btn,.p-order-btn{font-size:12px;padding:9px;margin-top:0;}
 }
+
+/* -------- pago con Yape -------- */
+.btn-yape{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:#742284;color:#fff;font-family:inherit;font-weight:600;font-size:14px;padding:13px 18px;border:none;border-radius:999px;cursor:pointer;box-shadow:0 10px 22px rgba(116,34,132,.3);transition:transform .3s ease,background .3s ease;}
+.btn-yape:hover{background:#5d1a6b;transform:translateY(-2px);}
+.yape-marca{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;background:#10cbb4;color:#742284;font-size:10.5px;font-weight:800;}
+.yape-pago{padding:8px 0 4px;text-align:center;animation:fadeUp .35s ease;}
+.yape-monto{display:flex;justify-content:space-between;align-items:baseline;background:var(--paper-dim);border-radius:14px;padding:14px 16px;}
+.yape-monto span{font-size:13px;color:var(--ink-70);}
+.yape-monto b{font-family:var(--font-display);font-size:22px;}
+.yape-aviso{margin-top:12px;font-size:12.5px;line-height:1.5;color:var(--rose-deep);background:rgba(232,99,127,.08);border-radius:12px;padding:10px 12px;text-align:left;}
+.yape-qr{display:block;width:100%;max-width:240px;margin:18px auto 0;border-radius:16px;box-shadow:0 12px 26px rgba(116,34,132,.22);}
+.yape-titular{margin-top:12px;font-size:13px;color:var(--ink-70);}
+.yape-titular b{color:var(--ink);}
+.yape-descargar{display:inline-block;margin-top:8px;font-size:12.5px;color:#742284;font-weight:600;text-decoration:underline;}
+.yape-pasos{margin:18px 0 0;padding-left:20px;text-align:left;font-size:13px;line-height:1.55;color:var(--ink-70);}
+.yape-pasos li{margin-bottom:6px;}

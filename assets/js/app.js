@@ -8,6 +8,8 @@
   var STOCK_URGENTE = 4; // a partir de cuántas unidades deja de verse "urgente"
   var CLAVE_FAVORITOS = 'jr-moda-favoritos';
   var CLAVE_CARRITO = 'jr-moda-carrito';
+  var YAPE_QR = 'assets/img/yape-qr.webp';
+  var YAPE_TITULAR = 'Julissa Hipolita Robles Herrera';
   var MAX_CATEGORIAS_MENU = 3; // con más categorías, el menú de escritorio no las repite (están en la barra de pills)
   var MAX_MUESTRAS_TARJETA = 6; // cuántas muestras de color se ven en la tarjeta (el resto: "+N")
 
@@ -96,6 +98,7 @@
     try { window.localStorage.setItem(clave, JSON.stringify(valor)); } catch (e) { /* almacenamiento no disponible */ }
   }
 
+  var vistaPago = false; // true = el carrito muestra el paso "Pagar con Yape"
   var favoritos = leerAlmacen(CLAVE_FAVORITOS);
   var carrito = leerAlmacen(CLAVE_CARRITO); // { [productoId]: cantidad }
   // Si el catálogo cambió y algún producto guardado ya no existe, se limpia solo.
@@ -309,13 +312,14 @@
 
   function vaciarCarrito() {
     carrito = {};
+    vistaPago = false;
     guardarCarrito();
     actualizarBadgeCarrito();
     renderCarrito();
   }
 
-  function mensajeWhatsAppCarrito() {
-    var lineas = ['¡Hola JR Moda! Quiero pedir:'];
+  function mensajeWhatsAppCarrito(pagoYape) {
+    var lineas = [pagoYape ? '¡Hola JR Moda! Ya pagué con Yape mi pedido:' : '¡Hola JR Moda! Quiero pedir:'];
     Object.keys(carrito).forEach(function (clave) {
       var linea = leerLinea(clave);
       if (!linea) return;
@@ -326,6 +330,10 @@
     });
     lineas.push('');
     lineas.push('Total: ' + textoTotalCarrito());
+    if (pagoYape) {
+      lineas.push('');
+      lineas.push('Te adjunto la captura del Yape 📎');
+    }
     return linkWhatsApp(lineas.join('\n'));
   }
 
@@ -335,6 +343,12 @@
     if (!cuerpo || !pie) return;
 
     var ids = Object.keys(carrito).filter(function (clave) { return leerLinea(clave); });
+
+    if (!ids.length) vistaPago = false;
+    if (vistaPago) {
+      renderPagoYape(cuerpo, pie);
+      return;
+    }
 
     if (!ids.length) {
       cuerpo.innerHTML =
@@ -375,10 +389,44 @@
 
     pie.innerHTML =
       '<div class="cart-total-row"><span>Total (' + cantidadTotalCarrito() + ' prenda' + (cantidadTotalCarrito() === 1 ? '' : 's') + ')</span><b>' + textoTotalCarrito() + '</b></div>' +
-      '<a class="btn-whatsapp full" id="btn-finalizar-pedido" href="' + mensajeWhatsAppCarrito() + '" target="_blank" rel="noopener">Finalizar pedido por WhatsApp</a>' +
+      '<button class="btn-yape" id="btn-pagar-yape" type="button"><span class="yape-marca">S/</span> Pagar con Yape</button>' +
+      '<a class="btn-whatsapp full" id="btn-finalizar-pedido" href="' + mensajeWhatsAppCarrito(false) + '" target="_blank" rel="noopener">Coordinar pedido por WhatsApp</a>' +
       '<a class="cart-vaciar" id="btn-vaciar-carrito" href="#">Vaciar carrito</a>';
     var btnVaciar = document.getElementById('btn-vaciar-carrito');
     if (btnVaciar) btnVaciar.addEventListener('click', function (ev) { ev.preventDefault(); vaciarCarrito(); });
+    document.getElementById('btn-pagar-yape').addEventListener('click', function () {
+      vistaPago = true;
+      renderCarrito();
+      cuerpo.scrollTop = 0;
+    });
+  }
+
+  // Paso de pago: QR de Yape + enviar la captura por WhatsApp.
+  function renderPagoYape(cuerpo, pie) {
+    var porConfirmar = carritoTienePrecioPorConfirmar();
+    cuerpo.innerHTML =
+      '<div class="yape-pago">' +
+      '<div class="yape-monto"><span>Monto a pagar</span><b>' + textoTotalCarrito() + '</b></div>' +
+      (porConfirmar
+        ? '<p class="yape-aviso">Algunas prendas aún no tienen precio publicado: escríbenos por WhatsApp para confirmar el monto exacto antes de yapear.</p>'
+        : '') +
+      '<img class="yape-qr" src="' + YAPE_QR + '" alt="Código QR de Yape de ' + YAPE_TITULAR + '">' +
+      '<p class="yape-titular">Titular: <b>' + YAPE_TITULAR + '</b></p>' +
+      '<a class="yape-descargar" href="' + YAPE_QR + '" download="yape-jr-moda.webp">Descargar QR (para pagar desde el mismo celular)</a>' +
+      '<ol class="yape-pasos">' +
+      '<li>Abre Yape y escanea el código QR (o súbelo desde tu galería).</li>' +
+      '<li>Verifica que el titular sea <b>' + YAPE_TITULAR + '</b> y paga el monto.</li>' +
+      '<li>Envíanos la captura del pago por WhatsApp para confirmar tu pedido y coordinar la entrega.</li>' +
+      '</ol>' +
+      '</div>';
+    pie.innerHTML =
+      '<a class="btn-whatsapp full" id="btn-enviar-comprobante" href="' + mensajeWhatsAppCarrito(true) + '" target="_blank" rel="noopener">Ya pagué: enviar captura por WhatsApp</a>' +
+      '<a class="cart-vaciar" id="btn-volver-carrito" href="#">← Volver al carrito</a>';
+    document.getElementById('btn-volver-carrito').addEventListener('click', function (ev) {
+      ev.preventDefault();
+      vistaPago = false;
+      renderCarrito();
+    });
   }
 
   function abrirCarrito() {
@@ -393,6 +441,7 @@
   function cerrarCarrito() {
     var drawer = document.getElementById('cart-drawer');
     if (!drawer) return;
+    vistaPago = false;
     drawer.classList.remove('open');
     drawer.setAttribute('aria-hidden', 'true');
     ocultarOverlaySiNadaAbierto();
