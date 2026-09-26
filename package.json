@@ -4,6 +4,7 @@
   "private": true,
   "description": "Sitio web de JR Moda — catálogo generado automáticamente desde la carpeta /productos.",
   "scripts": {
-    "catalogo": "node scripts/generar-catalogo.js"
+    "catalogo": "node scripts/generar-catalogo.js",
+    "test": "node --test tests/*.test.js"
   }
 }

@@ -5,7 +5,6 @@
   var WHATSAPP_NUMERO = '51950757578';
   var TIKTOK_URL = 'https://www.tiktok.com/@julissarobles.moda';
   var TEMAS_POR_CATEGORIA = 6; // cuántos estilos de color rotan para las tarjetas de producto
-  var STOCK_URGENTE = 4; // a partir de cuántas unidades deja de verse "urgente"
   var CLAVE_FAVORITOS = 'jr-moda-favoritos';
   var CLAVE_CARRITO = 'jr-moda-carrito';
   var YAPE_QR = 'assets/img/yape-qr.webp';
@@ -27,54 +26,24 @@
     'gris': '#9a9a9f', 'gris-claro': '#cfcfd3', 'gris-oscuro': '#4a4a50', 'beige-gris': '#b8ad9e'
   };
 
+  var T = window.JRTienda; // lógica de carrito y precios (assets/js/tienda.js)
+  var formatearPrecio = T.formatearPrecio;
+  var escaparHtml = T.escaparHtml;
+  var tienePrecio = T.tienePrecio;
+  var nombreConColor = T.nombreConColor;
+  var primerColorDisponible = T.primerColorDisponible;
+  var mensajePedido = T.mensajePedido;
+  var mensajeAviso = T.mensajeAviso;
+
   var CATEGORIAS = Array.isArray(window.JR_CATEGORIAS) ? window.JR_CATEGORIAS.slice() : [];
   var PRODUCTOS = Array.isArray(window.JR_PRODUCTOS) ? window.JR_PRODUCTOS.slice() : [];
-  var MAPA_PRODUCTOS = {};
+  var MAPA_PRODUCTOS = T.crearIndice(PRODUCTOS);
   var MAPA_ETIQUETAS = {};
   var MAPA_TEMAS = {};
-  PRODUCTOS.forEach(function (p) {
-    if (!Array.isArray(p.colores)) p.colores = [];
-    MAPA_PRODUCTOS[p.id] = p;
-  });
 
-  // En el carrito cada línea es "idProducto|idColor" (idColor vacío si la prenda no tiene colores).
-  function claveLinea(producto, color) { return producto.id + '|' + (color ? color.id : ''); }
-  function leerLinea(clave) {
-    var corte = clave.lastIndexOf('|');
-    var idProducto = corte === -1 ? clave : clave.slice(0, corte);
-    var idColor = corte === -1 ? '' : clave.slice(corte + 1);
-    var producto = MAPA_PRODUCTOS[idProducto];
-    if (!producto) return null;
-    var color = null;
-    if (idColor) {
-      color = producto.colores.filter(function (c) { return c.id === idColor; })[0];
-      if (!color) return null;
-    } else if (producto.colores.length) {
-      return null;
-    }
-    return { producto: producto, color: color };
-  }
-  function nombreConColor(producto, color) {
-    return producto.nombre + (color ? ' (' + color.nombre + ')' : '');
-  }
-  function tienePrecio(producto) {
-    return typeof producto.precio === 'number' && !isNaN(producto.precio);
-  }
-  function primerColorDisponible(producto) {
-    var disponibles = producto.colores.filter(function (c) { return !c.agotado; });
-    return disponibles[0] || producto.colores[0] || null;
-  }
-  function imagenesDe(producto, color) {
-    if (color && color.imagenes && color.imagenes.length) return color.imagenes;
-    return producto.imagenes && producto.imagenes.length ? producto.imagenes : [''];
-  }
-  function mensajePedido(producto, color) {
-    return 'Hola JR Moda! Quiero pedir: ' + nombreConColor(producto, color) +
-      (tienePrecio(producto) ? ' - ' + formatearPrecio(producto.precio) : '. ¿Me confirmas el precio y las tallas?');
-  }
-  function mensajeAviso(producto, color) {
-    return 'Hola JR Moda! ¿Me avisas cuando vuelva el stock de "' + nombreConColor(producto, color) + '"?';
-  }
+  function leerLinea(clave) { return T.leerLinea(MAPA_PRODUCTOS, clave); }
+  function imagenesDe(producto, color) { return T.imagenesDe(producto, color); }
+  function primeraImagen(producto, color) { return imagenesDe(producto, color)[0] || ''; }
 
   /* ============ Utilidades ============ */
   function crear(tag, clase) {
@@ -82,16 +51,14 @@
     if (clase) el.className = clase;
     return el;
   }
-  function formatearPrecio(numero) {
-    return 'S/ ' + Number(numero).toFixed(2);
-  }
   function linkWhatsApp(mensaje) {
-    return 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(mensaje);
+    return T.linkWhatsApp(WHATSAPP_NUMERO, mensaje);
   }
+  // Siempre devuelve un objeto: si lo guardado está dañado (null, lista, texto), empieza vacío.
   function leerAlmacen(clave) {
     try {
-      var guardado = window.localStorage.getItem(clave);
-      return guardado ? JSON.parse(guardado) : {};
+      var guardado = JSON.parse(window.localStorage.getItem(clave) || '{}');
+      return guardado && typeof guardado === 'object' && !Array.isArray(guardado) ? guardado : {};
     } catch (e) { return {}; }
   }
   function guardarAlmacen(clave, valor) {
@@ -100,15 +67,10 @@
 
   var vistaPago = false; // true = el carrito muestra el paso "Pagar con Yape"
   var favoritos = leerAlmacen(CLAVE_FAVORITOS);
-  var carrito = leerAlmacen(CLAVE_CARRITO); // { [productoId]: cantidad }
-  // Si el catálogo cambió y algún producto guardado ya no existe, se limpia solo.
-  (function limpiarCarritoObsoleto() {
-    var huboCambios = false;
-    Object.keys(carrito).forEach(function (clave) {
-      if (!leerLinea(clave)) { delete carrito[clave]; huboCambios = true; }
-    });
-    if (huboCambios) guardarAlmacen(CLAVE_CARRITO, carrito);
-  })();
+  // { "idProducto|idColor": cantidad }. Si el catálogo cambió (prendas que ya no
+  // existen, se agotaron o bajó el stock) o lo guardado está dañado, se corrige solo.
+  var carrito = T.sanearCarrito(leerAlmacen(CLAVE_CARRITO), MAPA_PRODUCTOS);
+  guardarAlmacen(CLAVE_CARRITO, carrito);
 
   /* ============ Notificaciones (toast) ============ */
   function mostrarToast(mensaje) {
@@ -126,7 +88,7 @@
 
   /* ============ Enlaces de WhatsApp ============ */
   function iniciarEnlacesWhatsapp() {
-    var general = linkWhatsApp('Hola JR Moda! Quiero ver el catálogo 👑');
+    var general = linkWhatsApp('Hola JR Moda! Quiero ver el catálogo');
     ['btn-whatsapp-header', 'btn-whatsapp-mobile', 'btn-whatsapp-hero', 'btn-whatsapp-cta', 'btn-whatsapp-footer', 'btn-whatsapp-footer-link', 'btn-whatsapp-fab']
       .forEach(function (id) {
         var el = document.getElementById(id);
@@ -148,6 +110,7 @@
       if (ev.target.tagName === 'A') {
         menu.classList.remove('open');
         boton.classList.remove('open');
+        boton.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -230,30 +193,9 @@
   /* ============ Carrito de compra ============ */
   function guardarCarrito() { guardarAlmacen(CLAVE_CARRITO, carrito); }
 
-  function cantidadTotalCarrito() {
-    var total = 0;
-    Object.keys(carrito).forEach(function (id) { total += carrito[id]; });
-    return total;
-  }
-  function totalPrecioCarrito() {
-    var total = 0;
-    Object.keys(carrito).forEach(function (clave) {
-      var linea = leerLinea(clave);
-      if (linea && tienePrecio(linea.producto)) total += linea.producto.precio * carrito[clave];
-    });
-    return total;
-  }
-  function carritoTienePrecioPorConfirmar() {
-    return Object.keys(carrito).some(function (clave) {
-      var linea = leerLinea(clave);
-      return linea && !tienePrecio(linea.producto);
-    });
-  }
-  function textoTotalCarrito() {
-    var total = totalPrecioCarrito();
-    if (!carritoTienePrecioPorConfirmar()) return formatearPrecio(total);
-    return total > 0 ? formatearPrecio(total) + ' + por cotizar' : 'Por confirmar';
-  }
+  function cantidadTotalCarrito() { return T.cantidadTotal(carrito, MAPA_PRODUCTOS); }
+  function carritoTienePrecioPorConfirmar() { return T.hayPrecioPorConfirmar(carrito, MAPA_PRODUCTOS); }
+  function textoTotalCarrito() { return T.textoTotal(carrito, MAPA_PRODUCTOS); }
   function actualizarBadgeCarrito() {
     var badge = document.getElementById('cart-badge');
     if (!badge) return;
@@ -265,19 +207,16 @@
     badge.classList.add('bump');
   }
 
+  function avisarNoSePuede(motivo, producto, color) {
+    if (motivo === 'agotado') mostrarToast('"' + nombreConColor(producto, color) + '" está agotado');
+    else mostrarToast('Ya agregaste todo el stock disponible de "' + producto.nombre + '"');
+  }
+
   function agregarAlCarrito(producto, color) {
-    if (color && color.agotado) {
-      mostrarToast('El color ' + color.nombre + ' está agotado');
-      return;
-    }
-    var clave = claveLinea(producto, color);
-    var disponibles = producto.stock;
-    var enCarrito = carrito[clave] || 0;
-    if (disponibles !== null && disponibles !== undefined && enCarrito >= disponibles) {
-      mostrarToast('Ya agregaste todo el stock disponible de "' + nombreConColor(producto, color) + '"');
-      return;
-    }
-    carrito[clave] = enCarrito + 1;
+    var revision = T.puedeAgregar(carrito, MAPA_PRODUCTOS, producto, color);
+    if (!revision.ok) { avisarNoSePuede(revision.motivo, producto, color); return; }
+    var clave = T.claveLinea(producto, color);
+    carrito[clave] = (carrito[clave] || 0) + 1;
     guardarCarrito();
     actualizarBadgeCarrito();
     renderCarrito();
@@ -286,13 +225,12 @@
 
   function cambiarCantidadCarrito(id, delta) {
     var linea = leerLinea(id);
-    var producto = linea && linea.producto;
-    var actual = carrito[id] || 0;
-    var nueva = actual + delta;
-    if (producto && producto.stock !== null && producto.stock !== undefined && nueva > producto.stock) {
-      mostrarToast('No hay más stock disponible de "' + nombreConColor(producto, linea.color) + '"');
-      return;
+    if (!linea) return;
+    if (delta > 0) {
+      var revision = T.puedeAgregar(carrito, MAPA_PRODUCTOS, linea.producto, linea.color);
+      if (!revision.ok) { avisarNoSePuede(revision.motivo, linea.producto, linea.color); return; }
     }
+    var nueva = (carrito[id] || 0) + delta;
     if (nueva <= 0) {
       delete carrito[id];
     } else {
@@ -319,22 +257,7 @@
   }
 
   function mensajeWhatsAppCarrito(pagoYape) {
-    var lineas = [pagoYape ? '¡Hola JR Moda! Ya pagué con Yape mi pedido:' : '¡Hola JR Moda! Quiero pedir:'];
-    Object.keys(carrito).forEach(function (clave) {
-      var linea = leerLinea(clave);
-      if (!linea) return;
-      var p = linea.producto;
-      var cant = carrito[clave];
-      lineas.push('• ' + nombreConColor(p, linea.color) + ' x' + cant + ' — ' +
-        (tienePrecio(p) ? formatearPrecio(p.precio * cant) : 'precio por confirmar'));
-    });
-    lineas.push('');
-    lineas.push('Total: ' + textoTotalCarrito());
-    if (pagoYape) {
-      lineas.push('');
-      lineas.push('Te adjunto la captura del Yape 📎');
-    }
-    return linkWhatsApp(lineas.join('\n'));
+    return linkWhatsApp(T.mensajeCarrito(carrito, MAPA_PRODUCTOS, pagoYape));
   }
 
   function renderCarrito() {
@@ -367,10 +290,10 @@
       var cant = carrito[id];
       var fila = crear('div', 'cart-item');
       fila.innerHTML =
-        '<img class="cart-item-img" src="' + imagenesDe(p, linea.color)[0] + '" alt="' + p.nombre + '">' +
+        '<img class="cart-item-img" src="' + escaparHtml(primeraImagen(p, linea.color)) + '" alt="' + escaparHtml(p.nombre) + '">' +
         '<div class="cart-item-info">' +
-        '<div class="cart-item-nombre">' + p.nombre + '</div>' +
-        (linea.color ? '<div class="cart-item-color">Color: ' + linea.color.nombre + '</div>' : '') +
+        '<div class="cart-item-nombre">' + escaparHtml(p.nombre) + '</div>' +
+        (linea.color ? '<div class="cart-item-color">Color: ' + escaparHtml(linea.color.nombre) + '</div>' : '') +
         '<div class="cart-item-precio">' + (tienePrecio(p) ? formatearPrecio(p.precio) + ' c/u' : 'Precio por confirmar') + '</div>' +
         '<div class="cart-item-qty">' +
         '<button class="qty-btn" data-accion="menos" type="button" aria-label="Quitar una unidad">−</button>' +
@@ -467,7 +390,7 @@
       boton.setAttribute('aria-label', 'Color ' + boton.title);
       var hex = COLORES_HEX[color.id];
       if (hex) boton.style.background = hex;
-      else boton.style.backgroundImage = 'url("' + color.imagenes[0] + '")';
+      else if (color.imagenes && color.imagenes[0]) boton.style.backgroundImage = 'url("' + color.imagenes[0] + '")';
       boton.addEventListener('click', function (ev) {
         ev.preventDefault();
         ev.stopPropagation();
@@ -488,7 +411,7 @@
   function filaPrecioHtml(producto) {
     if (!tienePrecio(producto)) return '<span class="p-price consultar">Consultar precio</span>';
     var html = '';
-    if (producto.precioAntes) html += '<span class="p-old">' + formatearPrecio(producto.precioAntes) + '</span>';
+    if (T.porcentajeDescuento(producto) !== null) html += '<span class="p-old">' + formatearPrecio(producto.precioAntes) + '</span>';
     return html + '<span class="p-price">' + formatearPrecio(producto.precio) + '</span>';
   }
 
@@ -531,7 +454,7 @@
       '<img id="qv-img" alt="">' +
       '</div>' +
       '<div class="qv-info">' +
-      '<span class="p-cat">' + etiquetaCategoria + '</span>' +
+      '<span class="p-cat">' + escaparHtml(etiquetaCategoria) + '</span>' +
       '<h2></h2>' +
       '<div class="p-price-row">' + filaPrecioHtml(producto) + '</div>' +
       construirBadgeStock(producto) +
@@ -548,7 +471,7 @@
 
     function pintar() {
       var imagenes = imagenesDe(producto, color);
-      img.src = imagenes[0];
+      img.src = imagenes[0] || '';
       pintarPuntos(media, imagenes, img);
       var etiquetaColor = panel.querySelector('#qv-color-nombre');
       if (etiquetaColor && color) etiquetaColor.textContent = color.nombre + (color.agotado ? ' — agotado' : '');
@@ -602,12 +525,10 @@
     '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.5 3h2l2.6 12.4a2 2 0 0 0 2 1.6h8.3a2 2 0 0 0 2-1.6L21 8H6"></path></svg>';
 
   function construirBadgeStock(producto) {
-    if (producto.agotado) return '';
-    if (producto.stock === null || producto.stock === undefined) return '';
-    if (producto.stock <= STOCK_URGENTE) {
-      return '<div class="badge-stock urgente"><i class="dot"></i> ¡Últimas ' + producto.stock + ' unidades!</div>';
-    }
-    return '<div class="badge-stock">Disponible</div>';
+    var texto = T.textoStock(producto);
+    if (!texto) return '';
+    if (texto === 'Disponible') return '<div class="badge-stock">Disponible</div>';
+    return '<div class="badge-stock urgente"><i class="dot"></i> ' + texto + '</div>';
   }
 
   function crearTarjetaProducto(producto, temaClase, etiquetaCategoria) {
@@ -620,10 +541,9 @@
       var ribbon = crear('span', 'ribbon-agotado');
       ribbon.textContent = 'Agotado';
       media.appendChild(ribbon);
-    } else if (producto.precioAntes && tienePrecio(producto)) {
-      var descuento = Math.round((1 - producto.precio / producto.precioAntes) * 100);
+    } else if (T.porcentajeDescuento(producto) !== null) {
       var badge = crear('span', 'badge-discount');
-      badge.textContent = '-' + descuento + '%';
+      badge.textContent = '-' + T.porcentajeDescuento(producto) + '%';
       media.appendChild(badge);
     }
 
@@ -681,7 +601,7 @@
 
     function pintar() {
       var imagenes = imagenesDe(producto, color);
-      img.src = imagenes[0];
+      img.src = imagenes[0] || '';
       pintarPuntos(media, imagenes, img);
 
       filaBotones.innerHTML = '';
@@ -807,7 +727,7 @@
           grid.appendChild(crearTarjetaProducto(producto, MAPA_TEMAS[cat.id], cat.etiqueta));
         });
       } else {
-        grid.innerHTML = '<div class="empty-state">Muy pronto vas a encontrar prendas de ' + cat.etiqueta + ' aquí. ✨</div>';
+        grid.innerHTML = '<div class="empty-state">Muy pronto vas a encontrar prendas de ' + escaparHtml(cat.etiqueta) + ' aquí. ✨</div>';
       }
       seccion.appendChild(grid);
 

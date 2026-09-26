@@ -16,6 +16,7 @@ jr-moda/
 ├── assets/
 │   ├── css/styles.css            # todos los estilos y animaciones
 │   ├── js/app.js                 # arma el catálogo en pantalla y la interacción (menú, WhatsApp, favoritos...)
+│   ├── js/tienda.js              # lógica del carrito, precios y mensajes (sin pantalla, probada con tests)
 │   ├── js/data/productos.js      # ⚙️ GENERADO AUTOMÁTICAMENTE — no editar a mano
 │   └── img/logo.png              # logo de la marca
 ├── productos/                    # 👉 AQUÍ se agregan las fotos de cada prenda
@@ -27,6 +28,7 @@ jr-moda/
 │   └── ...
 ├── scripts/
 │   └── generar-catalogo.js       # lee /productos y escribe productos.js
+├── tests/                        # pruebas automáticas (node --test, sin instalar nada)
 └── .github/workflows/deploy.yml  # arma el catálogo y publica el sitio automáticamente
 ```
 
@@ -88,6 +90,20 @@ Esto vuelve a leer `/productos` y actualiza
 `assets/js/data/productos.js`. Si no tienes Node.js instalado, no pasa
 nada: al subir los cambios a GitHub, el catálogo se genera solo (ver
 abajo).
+
+## Pruebas automáticas
+
+```bash
+npm test
+```
+
+Prueban el carrito (colores, stock, agotados, totales, mensajes de
+WhatsApp y Yape, datos guardados dañados) y el generador del catálogo
+(nombres de archivo, copias de Windows, precios inválidos, categorías
+repetidas) y que todas las fotos del catálogo real existan. Usan el
+runner que ya trae Node.js, sin instalar dependencias. GitHub Actions
+las corre antes de publicar: si alguna falla, el sitio no se actualiza
+y la versión anterior sigue en línea.
 
 ## Publicarlo en internet con GitHub Pages
 

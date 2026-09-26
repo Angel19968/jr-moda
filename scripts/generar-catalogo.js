@@ -14,15 +14,20 @@ const fs = require('fs');
 const path = require('path');
 
 const RAIZ = path.join(__dirname, '..');
-const CARPETA_PRODUCTOS = path.join(RAIZ, 'productos');
 const ARCHIVO_SALIDA = path.join(RAIZ, 'assets', 'js', 'data', 'productos.js');
 const EXTENSIONES_VALIDAS = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
+// ids que ya usa index.html: una categoría no puede llamarse igual (rompería los enlaces del menú)
+const IDS_RESERVADOS = ['top', 'catalogo', 'categorias', 'lives', 'envios', 'overlay', 'cat-pills'];
 
-let huboAdvertencias = false;
+let CARPETA_PRODUCTOS = path.join(RAIZ, 'productos');
+let advertencias = [];
 
 function advertir(mensaje) {
-  huboAdvertencias = true;
-  console.warn('⚠ ' + mensaje);
+  advertencias.push(mensaje);
+  if (!module.exports.silencioso) {
+    // En GitHub Actions el aviso aparece también en el resumen de la ejecución.
+    console.warn((process.env.GITHUB_ACTIONS ? '::warning::' : '⚠ ') + mensaje.replace(/\n/g, ' '));
+  }
 }
 
 function limpiarTexto(texto) {
@@ -69,11 +74,16 @@ function parsearTexto(texto, rutaParaAvisos, precioObligatorio) {
     nombreCrudo = limpiarTexto(nombreCrudo.replace(/\bagotado\b/i, ''));
   }
 
+  if (!nombreCrudo) {
+    advertir(`Falta el nombre de la prenda en "${rutaParaAvisos}". Se omite.`);
+    return null;
+  }
+
   let precio = null;
   let resto = partes.slice(1);
   if (resto.length && !/^(antes|stock)\s+/i.test(resto[0])) {
     precio = parseFloat(resto[0].replace(',', '.'));
-    if (isNaN(precio)) {
+    if (isNaN(precio) || precio <= 0) {
       advertir(`Precio inválido en "${rutaParaAvisos}" (leí "${resto[0]}"). Se omite.`);
       return null;
     }
@@ -119,10 +129,17 @@ function esImagen(nombreArchivo) {
 }
 
 // Quita la extensión y el sufijo que Windows agrega solo al copiar/pegar
-// un archivo repetido: " (2)", " (3)"...
+// un archivo repetido: " (2)", " - copia", " - copia (2)", " - Copy"...
 function baseSinDuplicado(nombreArchivo) {
-  const base = path.basename(nombreArchivo, path.extname(nombreArchivo));
-  return base.replace(/\s*\(\d+\)\s*$/, '');
+  let base = path.basename(nombreArchivo, path.extname(nombreArchivo));
+  let anterior;
+  do {
+    anterior = base;
+    base = base
+      .replace(/\s*\(\d+\)\s*$/, '')
+      .replace(/\s+-\s+(copia|copy)\s*$/i, '');
+  } while (base !== anterior);
+  return base.trim();
 }
 
 function rutaPublica(...segmentos) {
@@ -192,7 +209,10 @@ function leerDescripcion(rutaCarpeta) {
   return '';
 }
 
-function generar() {
+// Lee la carpeta de productos y devuelve { categorias, productos, advertencias }.
+function construirCatalogo(carpetaProductos) {
+  CARPETA_PRODUCTOS = carpetaProductos || path.join(RAIZ, 'productos');
+  advertencias = [];
   const carpetasCategoria = leerCarpetasDeCategoria();
   const categorias = [];
   const productos = [];
@@ -202,7 +222,14 @@ function generar() {
     const match = nombreCarpeta.match(/^(\d+)[-_ ]+(.*)$/);
     const orden = match ? parseInt(match[1], 10) : 99;
     const etiqueta = limpiarTexto((match ? match[2] : nombreCarpeta).replace(/[-_]+/g, ' '));
-    const idCategoria = aSlug(etiqueta);
+    let idCategoria = aSlug(etiqueta);
+    if (IDS_RESERVADOS.indexOf(idCategoria) !== -1) idCategoria = 'cat-' + idCategoria;
+    if (categorias.some((c) => c.id === idCategoria)) {
+      advertir(`Hay dos categorías llamadas "${etiqueta}". Cambia el nombre de "${nombreCarpeta}".`);
+      let n = 2;
+      while (categorias.some((c) => c.id === idCategoria + '-' + n)) n++;
+      idCategoria = idCategoria + '-' + n;
+    }
 
     const rutaCarpeta = path.join(CARPETA_PRODUCTOS, nombreCarpeta);
     const descripcion = leerDescripcion(rutaCarpeta);
@@ -228,6 +255,10 @@ function generar() {
       if (!datos) return;
 
       const clave = idCategoria + '::' + datos.grupo;
+      if (grupos[clave] && grupos[clave].colores.length) {
+        advertir(`"${nombreCarpeta}/${archivo}" se llama igual que la carpeta del modelo "${grupos[clave].nombre}". Muévela dentro de esa carpeta como un color. Se omite.`);
+        return;
+      }
       if (!grupos[clave]) {
         grupos[clave] = {
           id: clave,
@@ -252,6 +283,11 @@ function generar() {
   });
 
   categorias.sort((a, b) => a.orden - b.orden || a.etiqueta.localeCompare(b.etiqueta, 'es'));
+  return { categorias: categorias, productos: productos, advertencias: advertencias.slice() };
+}
+
+function generar() {
+  const { categorias, productos } = construirCatalogo();
 
   const salida =
     '// Archivo generado automáticamente por scripts/generar-catalogo.js\n' +
@@ -263,9 +299,11 @@ function generar() {
   fs.writeFileSync(ARCHIVO_SALIDA, salida, 'utf8');
 
   console.log(`✔ Catálogo generado: ${productos.length} producto(s) en ${categorias.length} categoría(s) -> ${path.relative(RAIZ, ARCHIVO_SALIDA)}`);
-  if (huboAdvertencias) {
-    console.log('  (revisa las advertencias ⚠ de arriba: esos archivos no se publicaron)');
+  if (advertencias.length) {
+    console.log(`  (revisa las ${advertencias.length} advertencia(s) de arriba: esos archivos no se publicaron o se corrigieron)`);
   }
 }
 
-generar();
+module.exports = { construirCatalogo, parsearTexto, baseSinDuplicado, aSlug, silencioso: false };
+
+if (require.main === module) generar();
